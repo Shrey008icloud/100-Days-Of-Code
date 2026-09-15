@@ -1,0 +1,22 @@
+﻿/*Q73 (Arrays (1D))
+Write a program to left rotate an array by one position.
+Show Sample Test Cases
+Input 1:
+5
+1 2 3 4 5
+Output 1:
+2 3 4 5 1*/
+#include <stdio.h>
+
+int main() {
+    int a[100], n, i, temp;
+    scanf("%d", &n);
+    for (i = 0; i < n; i++) scanf("%d", &a[i]);
+
+    temp = a[0];
+    for (i = 0; i < n - 1; i++) a[i] = a[i + 1];
+    a[n - 1] = temp;
+
+    for (i = 0; i < n; i++) printf("%d ", a[i]);
+    return 0;
+}
